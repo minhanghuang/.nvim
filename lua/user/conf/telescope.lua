@@ -26,7 +26,9 @@ telescope.setup {
         ["<C-p>"] = actions.preview_scrolling_up,
         -- 查看历史
         ["<C-u>"] = actions.cycle_history_prev,
+        ["<Down>"] = actions.cycle_history_prev,
         ["<C-e>"] = actions.cycle_history_next,
+        ["<Up>"] = actions.cycle_history_next,
       }
     },
     -- other layout configuration here
