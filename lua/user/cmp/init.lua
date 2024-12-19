@@ -69,6 +69,27 @@ return {
           require("codeium").setup({})
         end,
       },
+
+      {
+        -- https://github.com/zbirenbaum/copilot.lua
+        "zbirenbaum/copilot.lua",
+        cmd = { "Copilot", "Copilot Auth" },
+        event = "InsertEnter",
+        config = function()
+          require("copilot").setup({
+            suggestion = { enabled = false },
+            panel = { enabled = false },
+          })
+        end
+      },
+      {
+        -- https://github.com/zbirenbaum/copilot-cmp
+        "zbirenbaum/copilot-cmp",
+        after = { "copilot.lua", "nvim-cmp" },
+        config = function()
+          require("copilot_cmp").setup()
+        end
+      }
     },
     config = function()
       local autopairs = require("nvim-autopairs.completion.cmp")
@@ -200,6 +221,7 @@ return {
         -- 补全来源
         sources = cmp.config.sources({
           { name = 'nvim_lsp',                priority = 50 },
+          { name = 'copilot',                 priority = 50 },
           { name = 'codeium',                 priority = 50 },
           { name = 'nvim_lua',                priority = 50 },
           { name = 'buffer',                  priority = 40 },
@@ -289,6 +311,7 @@ return {
               Operator = "󰆕",
               TypeParameter = "",
               Codeium = "",
+              Copilot = "",
             },
           }),
         },
