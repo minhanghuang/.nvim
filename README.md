@@ -192,9 +192,11 @@ sudo install lazygit /usr/local/bin
 
 #### #1.4.1 Copilot
 
+![copilot-auth](https://raw.githubusercontent.com/wiki/minhanghuang/nvim/images/copilot-auth.jpg)
+
 1. Can be done by running: `:Copilot Auth`
 
-2. Copy the verification code 
+2. Copy the verification code
 
 3. Open the link in a browser and log in
 
@@ -202,13 +204,13 @@ sudo install lazygit /usr/local/bin
 
 #### #1.4.2 Codeium
 
+![codeium-auth](https://raw.githubusercontent.com/wiki/minhanghuang/nvim/images/codeium-auth.jpg)
+
 1. [login codeium](https://codeium.com/vim_tutorial?extensionName=neovim)
 
 2. Can be done by running: `:Codeium Auth`
 
 3. Select `Display URL`
-
-![codeium-auth](https://raw.githubusercontent.com/wiki/minhanghuang/nvim/images/codeium-auth.jpg)
 
 4. Copy and paste the URL into the browser
 
