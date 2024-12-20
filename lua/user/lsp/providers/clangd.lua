@@ -1,7 +1,13 @@
 local config = require("user.lsp.config")
 
 return {
-  capabilities = config.capabilities,
+  -- capabilities = config.capabilities,
+  capabilities = vim.tbl_deep_extend('force', config.capabilities, {
+    offsetEncoding = { 'utf-16' },
+    general = {
+      positionEncodings = { 'utf-16' },
+    },
+  }),
   on_attach = config.on_attach,
   -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#clangd
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' }, -- 禁止Protobuf lsp(https://github.com/minhanghuang/nvim/issues/41)

@@ -190,6 +190,18 @@ sudo install lazygit /usr/local/bin
 
 ### #1.4 ai
 
+#### #1.4.1 Copilot
+
+1. Can be done by running: `:Copilot Auth`
+
+2. Copy the verification code 
+
+3. Open the link in a browser and log in
+
+4. Enter the verification code
+
+#### #1.4.2 Codeium
+
 1. [login codeium](https://codeium.com/vim_tutorial?extensionName=neovim)
 
 2. Can be done by running: `:Codeium Auth`
