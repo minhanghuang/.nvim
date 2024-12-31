@@ -364,6 +364,15 @@ return {
       require("user.conf.nvim-treesitter")
     end,
   },
+  -- 高亮补充
+  {
+    -- https://github.com/m-demare/hlargs.nvim
+    "m-demare/hlargs.nvim",
+    event = { 'BufRead' },
+    config = function()
+      require('hlargs').setup()
+    end,
+  },
 
   -- 上下文
   {
