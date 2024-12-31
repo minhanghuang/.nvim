@@ -84,46 +84,13 @@ sudo make install
 
 ### #1.3 Node.js
 
-> The Node.js version I am using is selected as `v15.4.0`, and I am using `nvm` to manage the Node.js version
-
-- macOS
-
-```shell
-brew install nodejs yarn
-```
-
-```shell
-# option
-npm config set registry http://registry.npmmirror.com
-yarn config set registry http://registry.npmmirror.com
-```
-
-- Ubuntu
-
-```shell
-sudo apt update
-sudo apt install -y nodejs npm
-sudo npm install n -g
-sudo n stable
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update
-sudo apt install yarn
-```
-
-```shell
-# option
-sudo npm config set http://registry.npmmirror.com
-yarn config set registry http://registry.npmmirror.com
-```
-
-- nvm(option)
+> The Node.js version I'm using is selected as `v18.19.0`, and I am using `nvm` to manage the Node.js version
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.zshrc
-nvm install 15.4.0
-nvm alias default 15.4.0
+nvm install v18.19.0
+nvm alias default 18.19.0
 ```
 
 ### #1.3 dependency
