@@ -38,6 +38,15 @@ return {
           })
         end,
       },
+      -- 杀死不活跃的lsp客户端
+      {
+        "zeioth/garbage-day.nvim",
+        dependencies = "neovim/nvim-lspconfig",
+        event = "VeryLazy",
+        opts = {
+          -- your options here
+        }
+      },
     },
     opts = {
       -- options for vim.diagnostic.config()
