@@ -266,18 +266,44 @@ return {
     end,
   },
 
-  -- 缩进提示
+  -- -- 缩进提示
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   commit = '4541d69',
+  --   event = "VeryLazy",
+  --   config = function()
+  --     vim.opt.list = true
+  --     require("indent_blankline").setup {
+  --       show_end_of_line = true,
+  --       space_char_blankline = " ",
+  --     }
+  --   end,
+  -- },
+  -- 缩进
   {
-    "lukas-reineke/indent-blankline.nvim",
-    commit = '4541d69',
-    event = "VeryLazy",
+    -- https://github.com/shellRaining/hlchunk.nvim
+    "shellRaining/hlchunk.nvim",
     config = function()
-      vim.opt.list = true
-      require("indent_blankline").setup {
-        show_end_of_line = true,
-        space_char_blankline = " ",
-      }
-    end,
+      require("hlchunk").setup({
+        chunk = {
+          -- https://github.com/shellRaining/hlchunk.nvim/blob/main/docs/zh_CN/chunk.md
+          enable = true,
+          style = {
+            { fg = "#d47d26" },
+            { fg = "#c21f30" },
+          },
+          -- 动画
+          duration = 200,
+          delay = 10,
+        },
+        indent = {
+          enable = true,
+        },
+        line_num = {
+          enable = false,
+        },
+      })
+    end
   },
 
   -- 添加函数接口说明
@@ -544,34 +570,6 @@ return {
       -- -- 查看函数和变量 ui界面不佳, 使用lspsaga
       -- vim.keymap.set("n", "<Leader><Tab>", "<cmd>Trouble symbols toggle focus=true win.type='split' filter.buf=0 <CR>")
     end,
-  },
-
-  -- 缩进
-  {
-    -- https://github.com/shellRaining/hlchunk.nvim
-    "shellRaining/hlchunk.nvim",
-    event = { "UIEnter" },
-    config = function()
-      require("hlchunk").setup({
-        chunk = {
-          -- https://github.com/shellRaining/hlchunk.nvim/blob/main/docs/zh_CN/chunk.md
-          enable = true,
-          style = {
-            { fg = "#d47d26" },
-            { fg = "#c21f30" },
-          },
-          -- 动画
-          duration = 200,
-          delay = 10,
-        },
-        indent = {
-          enable = false,
-        },
-        line_num = {
-          enable = false,
-        },
-      })
-    end
   },
 
   -- 书签
