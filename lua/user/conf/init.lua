@@ -546,6 +546,34 @@ return {
     end,
   },
 
+  -- 缩进
+  {
+    -- https://github.com/shellRaining/hlchunk.nvim
+    "shellRaining/hlchunk.nvim",
+    event = { "UIEnter" },
+    config = function()
+      require("hlchunk").setup({
+        chunk = {
+          -- https://github.com/shellRaining/hlchunk.nvim/blob/main/docs/zh_CN/chunk.md
+          enable = true,
+          style = {
+            { fg = "#d47d26" },
+            { fg = "#c21f30" },
+          },
+          -- 动画
+          duration = 200,
+          delay = 10,
+        },
+        indent = {
+          enable = false,
+        },
+        line_num = {
+          enable = false,
+        },
+      })
+    end
+  },
+
   -- 书签
   {
     -- https://github.com/MattesGroeger/vim-bookmarks
