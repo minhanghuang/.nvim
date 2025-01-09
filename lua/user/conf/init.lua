@@ -182,7 +182,7 @@ return {
   -- 搜索美化(显示[c/N])
   {
     "kevinhwang91/nvim-hlslens",
-    commit = '1b629c0c28c4c5aa7923043e00a9e388b0ad937a',
+    tag = 'v1.1.0',
     event = "VeryLazy",
     config = function()
       require("user.conf.nvim-hlslens")
