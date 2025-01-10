@@ -186,6 +186,21 @@ return {
     event = "VeryLazy",
     config = function()
       require("user.conf.nvim-hlslens")
+      vim.api.nvim_set_keymap('n', 'n',
+        [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+        { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', 'N',
+        [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+        { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>l', ':noh<CR>', { noremap = true, silent = true })
+      -- 光标停留在当前字符, 不会跳转至下一个匹配的字符
+      -- keymap("n", "<C-f>", "g*", { silent = true })
+      vim.api.nvim_set_keymap('n', '<C-f>', [[:let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'<CR> :set hls<CR>]],
+        { noremap = true, silent = true })
     end,
   },
 
