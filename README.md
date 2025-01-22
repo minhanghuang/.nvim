@@ -8,7 +8,7 @@ git clone https://github.com/minhanghuang/nvim.git ~/.config/nvim
 
 ## #1 env
 
-### #1.1 Neovim
+### #1.1 neovim
 
 > Neovim minimum version required: `0.9.0`. If you wish to enable copying and pasteing functionality in SSH or docker containers, please upgrade to version `0.10.0` or `later`. [related link](https://github.com/neovim/neovim/pull/25872)
 
@@ -82,9 +82,12 @@ sudo make install
 - [DejaVuSansMono](https://www.nerdfonts.com/font-downloads)
 - [Monaco](https://github.com/Karmenzind/monaco-nerd-fonts/blob/master/fonts/MonacoNerdFont-Regular.ttf)
 
-### #1.3 Node.js
+### #1.3 Dependency
 
-> The Node.js version I'm using is selected as `v18.19.0`, and I am using `nvm` to manage the Node.js version
+
+#### #1.3.1 Node.js
+
+> The `Node.js` version I'm using is selected as `v18.19.0`, and I am using `nvm` to manage the Node.js version
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -93,11 +96,7 @@ nvm install v18.19.0
 nvm alias default 18.19.0
 ```
 
-### #1.3 dependency
-
-```shell
-python3 -m pip install -r requirement.txt
-```
+#### #1.3.2 third_party
 
 - macOS
 
@@ -124,11 +123,7 @@ brew install lazygit
 
 ```shell
 sudo apt update
-sudo apt install -y python3-venv
-```
-
-```shell
-sudo apt install -y universal-ctags global llvm tig
+sudo apt install -y python3-venv universal-ctags global llvm tig
 ```
 
 > ripgrep
@@ -155,7 +150,7 @@ sudo install lazygit /usr/local/bin
 
 </details>
 
-### #1.4 ai
+### #1.4 AI
 
 #### #1.4.1 Copilot
 
