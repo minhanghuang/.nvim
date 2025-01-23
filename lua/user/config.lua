@@ -55,18 +55,19 @@ local defaults = {
       'marksman@2023-12-09',                   -- markdown
     },
     formatter = {
-      "clang-format",      -- cpp
-      "autopep8", "black", -- python code format
-      "isort",             -- python import sort
-      "cmakelang",         -- cmakelists
-      "prettier",          -- Angular, CSS, Flow, GraphQL, HTML, JSON, JSX, JavaScript, LESS, Markdown, SCSS, TypeScript, Vue, YAML
+      { "clang-format", version = "19.1.6" }, -- cpp code format
+      { "autopep8",     version = "2.3.1" },  -- python code format
+      { "black",        version = "24.8.0" }, -- python code format
+      { "isort",        version = "5.13.2" }, -- python import sort
+      { "cmakelang",    version = "0.6.13" }, -- cmakelists
+      { "prettier",     version = "3.4.2" },  -- Angular, CSS, Flow, GraphQL, HTML, JSON, JSX, JavaScript, LESS, Markdown, SCSS, TypeScript, Vue, YAML
     },
     linter = {
       -- "cspell",       -- spell
       {
         -- https://github.com/minhanghuang/nvim/issues/50
         "cmakelint",
-        version = "1.4.2",              -- cmake
+        version = "1.4.2"
       },
       {
         "markdownlint", version = "0.38.0", -- markdown
