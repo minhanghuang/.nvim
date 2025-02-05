@@ -135,6 +135,8 @@ keymap("n", "<Leader>fj", ":lua require('user.util').telescope('live_grep', {gre
 -- 搜索TODO LIST
 keymap("n", "<Leader>ft", "<cmd>TodoTelescope<cr>", { silent = true })
 -- 指定路径搜索文件/字符 在 ./lua/pligin/nvim-tree.lua中
+-- 搜索剪切板
+keymap("n", "<Leader>fc", "<cmd>Telescope neoclip<cr>", { silent = true })
 
 -- buffers
 keymap("n", "<C-n>", ":BufferLineCycleNext<CR>", { silent = true })

@@ -106,7 +106,7 @@ brew install --HEAD universal-ctags
 ```
 
 ```shell
-brew install ripgrep gnu-sed llvm tig
+brew install ripgrep gnu-sed llvm tig sqlite
 ```
 
 <details>
@@ -123,7 +123,7 @@ brew install lazygit
 
 ```shell
 sudo apt update
-sudo apt install -y python3-venv universal-ctags global llvm tig
+sudo apt install -y python3-venv universal-ctags global llvm tig sqlite3 libsqlite3-0
 ```
 
 > ripgrep
