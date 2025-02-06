@@ -510,6 +510,19 @@ return {
     end,
   },
 
+  -- 剪切板管理器
+  {
+    -- https://github.com/AckslD/nvim-neoclip.lua
+    "AckslD/nvim-neoclip.lua",
+    dependencies = {
+      { 'kkharji/sqlite.lua',           module = 'sqlite' },
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      require("user.conf.nvim-neoclip")
+    end,
+  },
+
   -- TODO LIST
   {
     "folke/todo-comments.nvim",

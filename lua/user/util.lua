@@ -168,4 +168,28 @@ M.enable_tmux = function()
   end
 end
 
+--- 检查是否安装sqlite.so库
+M.has_sqlite = function()
+  if package.config:sub(1, 1) == '\\' then
+    return false -- Windows系统直接返回false
+  end
+
+  local sqlite_path = os.getenv("HOME") .. "/.local/lib/libsqlite.so"
+
+  -- 检查自定义路径下的 SQLite 库
+  local file = io.open(sqlite_path, "r")
+  if file then
+    file:close()
+    vim.g.sqlite_clib_path = sqlite_path
+    return true
+  end
+
+  -- 使用 `which` 命令检查系统是否安装了 sqlite3
+  local handle = io.popen("which sqlite3")
+  local result = handle:read("*a")
+  handle:close()
+
+  return result and #result > 0
+end
+
 return M
